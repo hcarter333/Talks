@@ -1,0 +1,156 @@
+
+\documentclass[prb,preprint]
+{revtex4-1} 
+% The line above defines the type of LaTeX document.
+% Note that AJP uses the same style as Phys. Rev. B (prb).
+
+% The % character begins a comment, which continues to the end of the line.
+
+\usepackage{amsmath}  % needed for \tfrac, \bmatrix, etc.
+\usepackage{amsfonts} % needed for bold Greek, Fraktur, and blackboard bold
+\usepackage{graphicx} % needed for figures
+\newcommand{\PRLsep}{\noindent\makebox[\linewidth]{\resizebox{0.8888\linewidth}{2pt}{$\bullet$}}\bigskip}
+
+\begin{document}
+
+% Be sure to use the \title, \author, \affiliation, and \abstract macros
+% to format your title page.  Don't use lower-level macros to  manually
+% adjust the fonts and centering.
+
+\title{Proposal for an Experimental Verification of the Hole Theory of Superconductivity}
+% In a long title you can use \\ to force a line break at a certain location.
+
+\author{Hamilton B. Carter}
+\email{hcarter333@tamu.edu} % optional
+% optional second address
+% If there were a second author at the same address, we would put another 
+% \author{} statement here.  Don't combine multiple authors in a single
+% \author statement.
+\affiliation{Department of Physics, Texas A\&M University, College Station, TX 77843}
+% Please provide a full mailing address here.
+
+
+% See the REVTeX documentation for more examples of author and affiliation lists.
+
+\date{\today}
+
+\begin{abstract}
+The hole theory of supeconductivity was first presented by Hirch and Marsiglio in 1989\cite{hirschfirsthole} as an attempt to explain the mechanism for superconductivity in the, then recently discovered, high temperature superconductors.  In the ensuing twenty-five years, that seminal first article has been cited 191 times and, Hirsch has continued to develop the theory and now posits it as a viable explanation for superconductivity in all superconducting materials.
+\end{abstract}
+
+\maketitle % title page is now complet
+
+
+\section{Introduction: What and Why 2/3 of a page}
+\textbf{Clearly state what you intend to do in this manuscript:}
+\\
+The example first clearly states that the proposed research is urgently needed.  It then states why the existing research does not meet the bar.  After doing both these things, it adds the sentence, "The purpose of this research project is to..."
+\\
+\\
+The purpose of the proposed research is to experimentally test two of the predictions made by the hole theory of superconductivity, that quenched superconductors emit ionizing radiation and that electron diffraction should reveal an increased atomic mean potential due to the expanded outer orbitals of the superconducting atoms.
+
+\section{Review of the Hole Theory of Superconductivity 3 pages at most}
+\section{Proposed Research}
+\textbf{List of experiments}
+The proposed research will focus on two specific predictions made by the hole theory of superconductivity.  The first prediction is that due to the giant-atom nature of superconducting materials, Bremsstrahlung radiation should be emitted when a superconductor is quenched.  The second is that atoms in the material have a much larger outer orbital due to the kinetic energy lowering of the paired carrier wave functions and that this expanded orbital will change the mean potential of the atom.  The theory predicts changes of a large enough magnitude that they should be detectable by simple electron diffraction techniques.
+\\
+The x-ray energy predicted by the theory scales linearly with sample radius and is derived by Hirsch\cite{hirschradiation}, (see equation 46), as,
+\\
+$E = \hbar \omega_m = \dfrac{R}{R_c}m_c c^2$
+\\
+(insert equation here), while the flux of the radiation scales with the surface area of the sample.  For a spherical sample, the flux scales as the square of the radius of the sample, (insert flux equation here).
+
+
+
+\begin{thebibliography}{99}
+% The numeral (here 99) in curly braces is nominally the number of entries in
+% the bibliography. It's supposed to affect the amount of space around the
+% numerical labels, so only the number of digits should matter--and even that
+% seems to make no discernible difference.
+% The issue number (3) in this citation is optional, because AJP's pagination 
+% is by volume.
+\bibitem{hirschpairing} Hirsch, J. E., "Electron-hole asymmetry: the key to superconductivity", in "High-Temperature Superconductivity", , ed. by J. Ashkenazi et al, Plenum Press, New York, 1991, p.295.
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYMG5Ra3BHWDZfT1k/edit?usp=sharing}
+
+\bibitem{hirschdifraction} Hirsch, J. E., "Superconductivity, diamagnetism, and the mean inner potential of solids", Annalen der Physik \textbf{526}, (2014), 63-78
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYYVM5a2lrRVJ5V3c/edit?usp=sharing}
+
+\bibitem{hirschfirsthole} Hirsch, J. E., "Superconducting state in an oxygen hole metal", Phys. Rev. B, \textbf{39}, (1989), 11515.
+
+\bibitem{hirschinhomogeneity} Hirsch, J. E., "Charge Expulsion, Spin Meissner Effect, and Charge
+Inhomogeneity in Superconductors", J Supercond Nov Magn \textbf{22}, 131 (2009)
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYc0xDVjR4RExMLW8/edit?usp=sharing}
+
+\bibitem{hirschradiation} Hirsch, J. E., "Ionizing radiation from superconductors in the theory of hole superconductivity",  J. Phys.: Condens. Matter, \textbf{19}, (2007), 125217  
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYaTIyNjJaZ0Q0TUE/edit?usp=sharing}
+
+\bibitem{belli} Bell, J., Leinaas, J., "Electrons as Accelerated Thermometers", Nuclear Physics B, \textbf{212}, (1983), 131  https://drive.google.com/file/d/0B30APQ2sxrAYbUFHUVA1TWp1NVU/edit?usp=sharing
+
+\bibitem{nietoi} Carruthers, P., Nieto, M., "Coherent States and the Forced Quantum Oscillator", American Journal of Physics, \textbf{33}, (1965), 537
+
+
+% The issue number (3) in this citation is optional, because AJP's pagination 
+% is by volume.
+
+
+\end{thebibliography}
+
+
+
+% If your manuscript is conditionally accepted, the editors will ask you to
+% submit your editable LaTeX source file.  Before doing so, you should move
+% all tables and figure captions to the end, as shown below.  Tables come 
+% first, followed by figure captions (with figure inclusions commented-out).
+% Figures should be submitted as separate files, collected with the
+% LaTeX file into a single .zip archive.
+
+%\newpage   % Start a new page for tables
+
+%\begin{table}[h!]
+%\centering
+%\caption{Elementary bosons}
+%\begin{ruledtabular}
+%\begin{tabular}{l c c c c p{5cm}}
+%Name & Symbol & Mass (GeV/$c^2$) & Spin & Discovered & Interacts with \\
+%\hline
+%Photon & $\gamma$ & \ \ 0 & 1 & 1905 & Electrically charged particles \\
+%Gluons & $g$ & \ \ 0 & 1 & 1978 & Strongly interacting particles (quarks and gluons) \\
+%Weak charged bosons & $W^\pm$ & \ 82 & 1 & 1983 & Quarks, leptons, $W^\pm$, $Z^0$, $\gamma$ \\
+%Weak neutral boson & $Z^0$ & \ 91 & 1 & 1983 & Quarks, leptons, $W^\pm$, $Z^0$ \\
+%Higgs boson & $H$ & 126 & 0 & 2012 & Massive particles (according to theory) \\
+%\end{tabular}
+%\end{ruledtabular}
+%\label{bosons}
+%\end{table}
+
+%\newpage   % Start a new page for figure captions
+
+%\section*{Figure captions}
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics{GasBulbData.eps}   % This line stays commented-out
+%\caption{Pressure as a function of temperature for a fixed volume of air.  
+%The three data sets are for three different amounts of air in the container. 
+%For an ideal gas, the pressure would go to zero at $-273^\circ$C.  (Notice
+%that this is a vector graphic, so it can be viewed at any scale without
+%seeing pixels.)}
+
+%\label{gasbulbdata}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=5in]{ThreeSunsets.jpg}   % This line stays commented-out
+%\caption{Three overlaid sequences of photos of the setting sun, taken
+%near the December solstice (left), September equinox (center), and
+%June solstice (right), all from the same location at 41$^\circ$ north
+%latitude. The time interval between images in each sequence is approximately
+%four minutes.}
+%\label{sunsets}
+%\end{figure}
+
+\end{document}

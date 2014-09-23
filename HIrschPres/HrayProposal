@@ -50,6 +50,18 @@ The example first clearly states that the proposed research is urgently needed. 
 The purpose of the proposed research is to experimentally test two of the predictions made by the hole theory of superconductivity, that quenched superconductors emit ionizing radiation and that electron diffraction should reveal an increased atomic mean potential due to the expanded outer orbitals of the superconducting atoms.
 
 \section{Review of the Hole Theory of Superconductivity 3 pages at most}
+\textbf{Spin and orbital velocity}
+\\
+There are two different velocties to keeep tracak of in the hole theory of superconductivity  The first is the spin velocity of the supercarriers in their expanded atomic orbitals it is given in terms of angular momentum\cite{hirschspinvel} as
+\\
+$L = m_e v_\sigma^0 \left(2 \lambda_L\right) = \dfrac{\hbar}{2}$
+\\
+which gives an intial spin velocity of 
+\\
+$v_\sigma^0 = \dfrac{\hbar}{4 m_e \lambda_L}$
+\\
+Note that the spin velocity is independent of the size of the sample and only depends on the London penetraation depth of the material.  This is due to the derivation above where it was shown that perfrect Larmor diamagnetism implies an expanded supercarrier orbital proportional to the London penetration depth of the material.
+\\
 \section{Proposed Research}
 \textbf{List of experiments}
 The proposed research will focus on two specific predictions made by the hole theory of superconductivity.  The first prediction is that due to the giant-atom nature of superconducting materials, Bremsstrahlung radiation should be emitted when a superconductor is quenched.  The second is that atoms in the material have a much larger outer orbital due to the kinetic energy lowering of the paired carrier wave functions and that this expanded orbital will change the mean potential of the atom.  The theory predicts changes of a large enough magnitude that they should be detectable by simple electron diffraction techniques.
@@ -87,7 +99,9 @@ Inhomogeneity in Superconductors", J Supercond Nov Magn \textbf{22}, 131 (2009)
 \bibitem{hirschradiation} Hirsch, J. E., "Ionizing radiation from superconductors in the theory of hole superconductivity",  J. Phys.: Condens. Matter, \textbf{19}, (2007), 125217  
 \url{https://drive.google.com/file/d/0B30APQ2sxrAYaTIyNjJaZ0Q0TUE/edit?usp=sharing}
 
-\bibitem{belli} Bell, J., Leinaas, J., "Electrons as Accelerated Thermometers", Nuclear Physics B, \textbf{212}, (1983), 131  https://drive.google.com/file/d/0B30APQ2sxrAYbUFHUVA1TWp1NVU/edit?usp=sharing
+\bibitem{hirschspinvel} Hirsch, J.E., "KINETIC ENERGY DRIVEN SUPERCONDUCTIVITY AND SUPERFLUIDITY", Modern Physics Letters B, \textbf{25}, (2011), 2219
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYS3A4ZkpYWEFhRjQ/edit?usp=sharing}
 
 \bibitem{nietoi} Carruthers, P., Nieto, M., "Coherent States and the Forced Quantum Oscillator", American Journal of Physics, \textbf{33}, (1965), 537
 

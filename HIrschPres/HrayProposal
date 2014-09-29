@@ -47,6 +47,20 @@ The hole theory of supeconductivity was first presented by Hirch and Marsiglio i
 The example first clearly states that the proposed research is urgently needed.  It then states why the existing research does not meet the bar.  After doing both these things, it adds the sentence, "The purpose of this research project is to..."
 \\
 \\
+In addition to testing the experimental limits of the hole theory of superconductivity, the proposed research will provide new data for the following four characterizations of superconductor behavior.
+\\
+1.  The triboelectric effect with regard to sueprconductors
+\\
+2.  The presence or absence of electric fields within superconductors.
+\\
+Hirsch points out that while Heinrich London performed an initial experiment on the existance of electric fields within superconductors which returned a null result (todo: add citation), the experiment has never been replicated or refined.  
+\\
+3.  Determine the mean inner potential of the constiuent atoms of materials in their superconducint state\cite{hirschdifraction}.
+\\
+4.  Characterization of the photonic radiation from superocnductors when they are quenched.
+\\
+Each of these characaterizations will be performed for both high termperature and conventional superconducting samples.  The data sets produced are listed in finer detail in the following table.
+\\
 The purpose of the proposed research is to experimentally test two of the predictions made by the hole theory of superconductivity, that quenched superconductors emit ionizing radiation and that electron diffraction should reveal an increased atomic mean potential due to the expanded outer orbitals of the superconducting atoms.
 
 \section{Review of the Hole Theory of Superconductivity 3 pages at most}
@@ -60,7 +74,42 @@ which gives an intial spin velocity of
 \\
 $v_\sigma^0 = \dfrac{\hbar}{4 m_e \lambda_L}$
 \\
-Note that the spin velocity is independent of the size of the sample and only depends on the London penetraation depth of the material.  This is due to the derivation above where it was shown that perfrect Larmor diamagnetism implies an expanded supercarrier orbital proportional to the London penetration depth of the material.
+Note that the spin velocity is independent of the size of the sample and only depends on the London penetraation depth of the material.  This falls out naturally from the derivation above where it was shown that perfrect Larmor diamagnetism implies an expanded supercarrier orbital proportional to the London penetration depth of the material.
+\\
+\\
+This might seem to raise issues with the ealier posited orbital velocity around the sample\cite{hirschradiation}.  In the reference's equation 7 it is given as 
+\\
+$\dfrac{m_e v^2}{r} = \dfrac{qe}{r^2}$
+\\
+Which gives for the orbital velocity
+\\
+$v = \sqrt{\dfrac{qe}{r m_e}}$
+\\
+Hirsch indicated that the above equation may be incorrect in light of the newer spin velocity information\cite{hirschprivvel}.  He does however, identify that the energy consideration expressed in equation 5 of the same document, 
+\\
+$\dfrac{qe}{r} = 2 m_e c^2$
+\\
+is still correct.
+\\
+Additional text on the above for when we need it.  The above expression states that at a critical radius, it will become energetically favorable to produce electron-positron pairs in the sample.
+\\
+Finally, he points out that the energy expression 4.b. in the same document is of the same order of magnitude of the later corrected expression.  4.b. states, 
+\\
+$\rho_- = e n_s \left(\dfrac{10}{3}\dfrac{\epsilon}{m_e c^2}\right)^{1/2}$
+\\
+In a private communication from Hirsch it was also identified that the above expression should be corrected in the following manner.  Using the equation for $\rho_-$ given in the 2008 Ann. Phys. paper\cite{hirschelectrodspin}, and equations 4a. and 5 from the Ionizing radiation paper\cite{hirschradiation} the correct expression for the critical radius mentioned above can be derived.  Here are the starting equations
+\\
+Eq. for $\rho_-$\cite{hirschelectrodspin}, equation 36.c.
+\\
+$\rho_- = \dfrac{\hbar c}{16 \pi e \lambda_L^3}$
+\\
+Eq 4.a. and 5\cite{hirschradiation}
+\\
+$q = 4 \pi R^2 \lambda_L \rho_-$
+\\
+$\dfrac{qe}{r} = 2 m_e c^2$
+\\
+We should be able to solve for $R_c$.  
 \\
 \section{Proposed Research}
 \textbf{List of experiments}
@@ -103,8 +152,11 @@ Inhomogeneity in Superconductors", J Supercond Nov Magn \textbf{22}, 131 (2009)
 \\
 \url{https://drive.google.com/file/d/0B30APQ2sxrAYS3A4ZkpYWEFhRjQ/edit?usp=sharing}
 
-\bibitem{nietoi} Carruthers, P., Nieto, M., "Coherent States and the Forced Quantum Oscillator", American Journal of Physics, \textbf{33}, (1965), 537
+\bibitem{hirschprivvel} Hirsch, J.E., "Private e-mail communication", 9/23/2014
 
+\bibitem{hirschelectrodspin} Hirsch, J. E., "Electrodynamics of spin currents in superconductors", Annalen der Physik \textbf{17}, (2008), 380
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
 
 % The issue number (3) in this citation is optional, because AJP's pagination 
 % is by volume.

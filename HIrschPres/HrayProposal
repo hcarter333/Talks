@@ -42,25 +42,25 @@ The hole theory of supeconductivity was first presented by Hirch and Marsiglio i
 
 
 \section{Introduction: What and Why 2/3 of a page}
-\textbf{Clearly state what you intend to do in this manuscript:}
-\\
-The example first clearly states that the proposed research is urgently needed.  It then states why the existing research does not meet the bar.  After doing both these things, it adds the sentence, "The purpose of this research project is to..."
+To date, there are no reliable methods for predicing where to look for new superconducting materials.  xxx met with emperiical success in the 1960s and 70s exploring materials with postitive Hall coefficients indicating that the intrinsic normal state charge carriers were in fact holes insted of electrons.  After the surprising announcement of high temperature superconducting materials in the 1980s, it was found that conventional BCS theory could not produce successful models for them.  Jorge Hirsch and F. Magliaso proposed a model of hole pairing along with a model Hamiltonian based on nearest neighbor hopping potentials.  In addition to providing a plausible model fo rthe superconducting behavior of these new matierials, their model also offered a more basic undertanding of several superconducting phenomena.  If experimentally verified, this hole pairing model could serve as a jumping off point to guide deterministic searches new superconducing compounds, and provides a simple, yet rigorous and cler mechaism for other superconducting dynmaic behaviors such as the Meissner effect and <add more dynamic predictions>.  The theory provides many testable predictions.  the proposed research will characterize superconducting samples with respect to these theoretical predictions.  Each of the predictions requires making a characterization of bulk superconductor behavior that has not been previously reported.  Consequntly, not only will the proposed research produce several experimental tests of the hole theory of superconductivity, it will also make contibute previously unmeasured superconductor characteristics to the existing body of knowledge.
 \\
 \\
-To date, there are no reliable methods for predicing where to look for new superconducting materials.  xxx met with emperiical success in the 1960s and 70s exploring materials with postitive Hall coefficients indicating that the intrinsic normal state charge carriers were in fact holes insted of electrons.  After the surprising announcement of high temperature superconducting materials in the 1980s, it was found that conventional BCS theory could not produce successful models for them.  Jorge Hirsch and F. Magliaso proposed a model of hole pairing along with a model Hamiltonian based on nearest neighbor hopping potentials.  In addition to providing a plausible model fo rthe superconducting behavior of these new matierials, their model also offered a more basic undertanding of several superconducting phenomena.  If experimentally verified, this hole pairing model could serve as a jumping off point to guide deterministic searches new superconducing compounds, and provides a simple, yet rigorous and cler mechaism for other superconducting dynmaic behaviors such as the Meissner effect and <add more dynamic predictions>.  The theory provides many testable predictions.  the proposed research will characterize superconducting samples with respect to these theoretical predictions.  Each of the predictions requires making a characterization of bulk superconductor behavior that has not been previously reported.  Consequntly, not only will the proposed research produce several experimental tests of the hole theory of superconductivity, it will also make contibute previously unmeasured superconductor characteristics to the existing body of knowledge.  
-\\
-The chain of logic behind the theory of hole superconductivity follows 
+in section II, the hole theory will be briefly summarized.  Section III will outline the key predictions made by the theory that the proposed research will address.  Section IV will provide a synopsis of the experimental apparatus for each test along with a work and procurement schedule.  Section V will provide a summary of the products that will result from the research, including papers and presentations.  Section VI will conclude with a discussion of the viability of the research and its impact on society.
 \\
 \\
-1.  The charged particles forming the paired super-current carriers are in fact holes and not electrons.
+\section{Theoretical Background}
+The theory of hole sueprconductivity will be developed using the following set of assumptions and logcial scaffolding.  
 \\
 \\
-2.  As the supercondcutor cools, holes pair and their wavelenghts expand corresponding to larger atomic radii.  A convenient model for this behavior can be found in the covalent bond of $H_2$.
+Assumption: the charged particles forming the paired super-current carriers are in fact holes located near the Fermi level of the sample material, not electrons foudn lower in the band.
 \\
 \\
-3.  In order to provide perfect diamagnetism, the orbital radii associated with the kinetic energy lowering of the holes are equal to the London penetration depth.
+As the supercondcutor cools, holes pair, lowering their kinetic energy, consequntly expanding their wavelengths to several 1000 times the size of the unpaired atomic radii.  A convenient model for this behavior can be found in the covalent bond of $H_2$.  A quantitative expression for this expanded radius can be logically deduced\cite{hirschlondondepth}.  Starting with the experimentally verified property of perfect diamagnetism, we can show that the supercarriers must expand to a radius eqivalent to the London penetrtion depth for the material. 
+\\
+<insert diamagnetism derivation and citation here>
 \\
 \\
+
 4.  These radii are so large that it is energetically favorable for the paired holes have to align their phases creating coherency on a macroscopic level across the entire superconducting sample.
 \\
 \\
@@ -195,6 +195,10 @@ Inhomogeneity in Superconductors", J Supercond Nov Magn \textbf{22}, 131 (2009)
 \url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
 
 \bibitem{londoncap} London, H, "An experimental examination of the electrostatic behaviour of Supraconductors", Proc. R. Soc. Lond. \textbf{155}, (1936), 86
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
+
+\bibitem{hirschlondondepth} Hirsch, J. E., "Why holes are not like electrons. II. The role of the electron-ion interaction", Phys. Rev. B \textbf{71}, (2005), 104522
 \\
 \url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
 

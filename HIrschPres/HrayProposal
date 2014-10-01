@@ -35,7 +35,7 @@
 \date{\today}
 
 \begin{abstract}
-The hole theory of supeconductivity was first presented by Hirch and Marsiglio in 1989\cite{hirschfirsthole} as an attempt to explain the mechanism for superconductivity in the, then recently discovered, high temperature superconductors.  In the ensuing twenty-five years, that seminal first article has been cited 191 times and, Hirsch has continued to develop the theory and now posits it as a viable explanation for superconductivity in all superconducting materials.
+The hole theory of supeconductivity was first presented by Hirch and Marsiglio in 1989\cite{hirschfirsthole} as an attempt to explain the mechanism for superconductivity in the, then recently discovered, high temperature superconductors.  In the ensuing twenty-five years, that seminal first article has been cited 191 times and, Hirsch has continued to develop the theory and now posits it as a viable explanation for superconductivity in all superconducting materials.  The proposed research is a series of experimental tests of the theory.  Each of the tests however, will also produce data for previously uncharacterized parameters and dynamic behaviors of bulk superconductors. 
 \end{abstract}
 
 \maketitle % title page is now complet
@@ -47,15 +47,42 @@ The hole theory of supeconductivity was first presented by Hirch and Marsiglio i
 The example first clearly states that the proposed research is urgently needed.  It then states why the existing research does not meet the bar.  After doing both these things, it adds the sentence, "The purpose of this research project is to..."
 \\
 \\
+The chain of logic behind the theory of hole superconductivity follows 
+\\
+\\
+1.  The charged particles forming the paired super-current carriers are in fact holes and not electrons.
+\\
+\\
+2.  As the supercondcutor cools, holes pair and their wavelenghts expand corresponding to larger atomic radii.  A convenient model for this behavior can be found in the covalent bond of $H_2$.
+\\
+\\
+3.  In order to provide perfect diamagnetism, the orbital radii associated with the kinetic energy lowering of the holes are equal to the London penetration depth.
+\\
+\\
+4.  These radii are so large that it is energetically favorable for the paired holes have to align their phases creating coherency on a macroscopic level across the entire superconducting sample.
+\\
+\\
+5.  Add something about how paris are predicted to be completely destroyed by quenching???
+\\
+\\
+Add a brief explanation of the predictions of the theory.  Here's a question for Dr. Agnolet.  What should an introduction include?  Obviously it can't go too deeply into the theory or it won't be an introductin anymore.  Lok at Andrew's introduction again.
+\\
+\\
+next:  add a few sentences saying what will be discussed in this proposal.
+\\
+\\
 In addition to testing the experimental limits of the hole theory of superconductivity, the proposed research will provide new data for the following four characterizations of superconductor behavior.
 \\
-1.  The triboelectric effect with regard to sueprconductors
+1.  The triboelectric effect with regard to sueprconductors.  Hirsch's theory predicts that samples in the superconducting state should fall near the end of the triboelectric scale.  He also points out that there have been no measurements made of the triboelectric properties of superconductors. NOTE: cite Hirsch's paper and the latest PRL triboelectric research.
+\\
 \\
 2.  The presence or absence of electric fields within superconductors.
 \\
-Hirsch points out that while Heinrich London performed an initial experiment on the existance of electric fields within superconductors which returned a null result (todo: add citation), the experiment has never been replicated or refined.  
+Hirsch points out\cite{Hirschcap} that while Heinrich London performed an initial experiment on the existance of electric fields within superconductors\cite{londoncap} which returned a null result (todo: add citation), the experiment has never been replicated or refined.  
 \\
-3.  Determine the mean inner potential of the constiuent atoms of materials in their superconducint state\cite{hirschdifraction}.
+\\
+3.  Determine the mean inner potential of the constiuent atoms of materials in their superconducing state\cite{hirschdifraction}.  The theory of hole superconductivity predicts that the outer orbital of superocnducting atoms should exapd to a radius equal to the London penetration depth for the given material.  This expansion should be visable in electron diffraction measurements.  
+\\
 \\
 4.  Characterization of the photonic radiation from superocnductors when they are quenched.
 \\
@@ -155,6 +182,17 @@ Inhomogeneity in Superconductors", J Supercond Nov Magn \textbf{22}, 131 (2009)
 \bibitem{hirschprivvel} Hirsch, J.E., "Private e-mail communication", 9/23/2014
 
 \bibitem{hirschelectrodspin} Hirsch, J. E., "Electrodynamics of spin currents in superconductors", Annalen der Physik \textbf{17}, (2008), 380
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp\bibitem{hirschelectrodspin} Hirsch, J. E., "Electrodynamics of spin currents in superconductors", Annalen der Physik \textbf{17}, (2008), 380
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
+=sharing}
+
+\bibitem{Hirschcap} Hirsch, J. E., "Electrodynamics of superconductors", Phys. Rev. B \textbf{69}, (2004), 214515
+\\
+\url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
+
+\bibitem{londoncap} London, H, "An experimental examination of the electrostatic behaviour of Supraconductors", Proc. R. Soc. Lond. \textbf{155}, (1936), 86
 \\
 \url{https://drive.google.com/file/d/0B30APQ2sxrAYanF0UFFLVGs3WHM/view?usp=sharing}
 

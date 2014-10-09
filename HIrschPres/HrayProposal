@@ -42,7 +42,24 @@ The hole theory of supeconductivity was first presented by Hirch and Marsiglio i
 
 
 \section{Introduction}
-To date, there are no reliable methods for predicting where to look for new superconducting materials.  xxx met with empirical success in the 1960s and 70s exploring materials with positive Hall coefficients indicating that the intrinsic normal state charge carriers were in fact holes instead of electrons.  After the surprising announcement of high temperature superconducting materials in the 1980s, it was found that conventional BCS theory could not produce successful models for them.  Jorge Hirsch and F. Magliaso proposed a hole pairing model with an associated Hamiltonian based on nearest neighbor hopping potentials.  In addition to providing a plausible model of the superconducting behavior of these new materials, their model also offered a more basic understanding of several superconducting phenomena.  If experimentally verified, this hole pairing model could serve as a jumping off point to guide deterministic searches new superconducting compounds.  It provides a simple, yet rigorous and clear mechanism for many superconducting dynamic behaviors such as the Meissner effect and <add more dynamic predictions>.  The theory provides many testable predictions.  The proposed research will characterize superconducting samples with respect to these theoretical predictions.  Each of the predictions requires making a characterization of bulk superconductor behavior that has not been previously reported.  Consequently, not only will the proposed research produce several experimental tests of the hole theory of superconductivity, it will also contribute previously unmeasured superconductor characteristics to the existing body of knowledge.
+To date, there are no reliable methods for predicting where to look for new superconducting materials.  Chapnik met with empirical success in the 1960s and 70s exploring materials with positive Hall coefficients indicating that the intrinsic normal state charge carriers were in fact holes instead of electrons.  After the surprising announcement of high temperature superconducting materials in the 1980s, it was found that conventional BCS theory could not produce successful models for them.  Jorge Hirsch and F. Magliaso proposed a hole pairing model with an associated Hamiltonian based on nearest neighbor hopping potentials.  In addition to providing a plausible model of the superconducting behavior of these new materials, their model also offered a more basic understanding of several superconducting phenomena.  If experimentally verified, this hole pairing model could serve as a jumping off point to guide deterministic searches new superconducting compounds.  It provides a simple, yet rigorous and clear mechanism for many superconducting dynamic behaviors such as the Meissner effect and <add more dynamic predictions>.
+\\
+\\
+Notes from review in class
+\\
+\\
+Define who didn't do it and what they did peripherally.  The purpose 
+\\
+\\
+List the papers that will come out of ther research.  As soon as possilbe in the proposal.  Add clear titles.
+\\
+\\
+Too many sections?
+\\
+\\
+\\
+\\
+The theory provides many testable predictions.  The proposed research will characterize superconducting samples with respect to these theoretical predictions.  Each of the predictions requires making a characterization of bulk superconductor behavior that has not been previously reported.  Consequently, not only will the proposed research produce several experimental tests of the hole theory of superconductivity, it will also contribute previously unmeasured superconductor characteristics to the existing body of knowledge.
 \\
 \\
 in section II, the hole theory will be briefly summarized.  Section III will outline the key predictions made by the theory that the proposed research will address.  Section IV will provide a synopsis of the experimental apparatus for each test along with a work and procurement schedule.  Section V will provide a summary of the products that will result from the research, including papers, presentations,and data sets.  Section VI will conclude with a discussion of the viability of the research and its impact on society.
@@ -62,7 +79,7 @@ As the supercondcutor cools, holes pair, lowering their kinetic energy, consequn
 4.  These radii are so large that it is energetically favorable for the paired holes have to align their phases creating coherency on a macroscopic level across the entire superconducting sample.
 \\
 \\
-5.  Add something about how paris are predicted to be completely destroyed by quenching???
+5.  Add something about how pairs are predicted to be completely destroyed by quenching???
 \\
 \\
 Add a brief explanation of the predictions of the theory.  Here's a question for Dr. Agnolet.  What should an introduction include?  Obviously it can't go too deeply into the theory or it won't be an introductin anymore.  Lok at Andrew's introduction again.
@@ -137,6 +154,73 @@ $q = 4 \pi R^2 \lambda_L \rho_-$
 $\dfrac{qe}{r} = 2 m_e c^2$
 \\
 We should be able to solve for $R_c$.  
+\\
+\\
+\textbf{Hole Theory Hamiltonian}
+\\
+\\
+$t$ is dentoed as the hopping amplitude.  The amplitude as a function of hole density proposed to first order is 
+\\
+\\
+$t\left(n_h\right) = t_h + \Delta t n_h$
+\\
+\\
+where $\Delta t = \dfrac{\partial t}{\partial n_h} > 0$
+\\
+\\
+For the oxides, most of the magnitude of $t$ is from the $\Delta t$ term.  
+\\
+\\
+For neighboring sites we have
+\\
+\\
+$t_{ij} = t_h + \Delta t \left(n_{i,-\sigma}+n_{j,-\sigma}\right)$
+\\
+\\
+This give a kinetic energy of 
+\\
+\\
+$H_{kin} = - \sum_{<jj>, \sigma} t_{ij}\left(c^+_{i\sigma}c_{j\sigma} + h.c.\right) = -\sum_{<jj>, \sigma}\left(t_h + \Delta t \left(n_{i,-\sigma} + n_{j,-\sigma}\right)\right)\left(c^+_{i\sigma}c_{j\sigma} + h.c.\right)$
+\\
+\\
+Where $t_{ij}$ is the nearest neighbor hopping amplitude.
+\\
+\\
+\textbf{Question}: Why is the last term of the above Hamiltonian taken as the potential when it's just a re-expression of the kinetic energy, (at least that's what equation 4 was stated to be.)  Is it because it's position dependent?
+\\
+\\
+\textbf{Answer}: The article doesn't say it is a potential, it merely says that by extending the Hamiltonian as it is above, you can see where the interaction terms comes from and that it is
+\\
+\\
+$V_h = -\Delta t\sum_{<jj>, \sigma}\left( \left(n_{i,-\sigma} + n_{j,-\sigma}\right)\right)\left(c^+_{i\sigma}c_{j\sigma} + h.c.\right)$
+\\
+\\
+Equation 5, for $V_h$ is the hopping interaction.  It seems like what we're saying is that if we can make the potential less negtaive, then we make it less repulsive.  That apparently is not the cae though.  If you can make the potential more negaitve, then it is more attractive.
+\\
+\\
+The Hamiltonian above 'leads to pairing with arbitrarily short coherence length'.  With $t_h = 0$, two holes will propagate only if they are nearest neighbors.  This gives a coherence lenght of less than a single lattice spacing.
+\\
+\\
+The next step is to copare this to a Hubbard odel with $U < 0$.  "This is widely used as a paradigm for short coherence length superconductors."  In this model, short coherence length occurs for small $t$ or large $U$.  This is all about equation 6 in the article.  However, in this regime the mobility of the pairs becomes very small, so it doesn't seem useful for superconductors with pairs.  
+\\
+\\
+There's another problem, in the attractive Hubbard model, ($U < 0$?), the binding energy increases relative to the effective hopping as the coherence lengthbecomes shorter  in equation 7, 
+\\
+\\
+$t_{eff} = \dfrac{t^2}{|U|}$
+\\
+\\
+So, under the above conditions?  we have 
+\\
+\\
+$E_b >> t_{eff}$
+\\
+\\
+Here we clear up how this compares to the Hubbard model and how the model, RVB, proposed by Anderson.  
+\\
+\\
+Equation 15 which Hirsch cites seems to belie my assumption however.  It says that the potential is the least repuslive for the largest energy, which makes the expression return the largest negative number.
+\\
 \\
 \section{Proposed Research}
 \textbf{List of experiments}

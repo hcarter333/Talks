@@ -48,13 +48,12 @@ Reference Munoz and Yoshida as having derived rotating versions of the Lalace-Ru
 Refernce the disc problem, Takeno, Thomas, and the perhaps one other person in that historical line.  Look at the Iranian paper to find the other person.  Reference the Iranian paper.
 \\
 \\
-\section{Language Port and Architecture}
-While IDL is still a ubiquitous language, and a free version known as GDL can be installed on Linux platforms, we decided to port the code to Python executed within the SageMath platform.  Our team is familiar with Python, and with the advent of packages like NumPy and SciPy, the language is gaining a certain noteriety with young physicists.  SageMath has a cloud based implementation that has been funded by the National Science Foundation and Google. The user interface of this cloud-based software implementation is accessible to the public through any web browser.  Consequently, anyone can make use of the SageMath platform and the ported simulator on any operating system that supports a web browser.  There are no operating system or software installation considerations to be made.
+\section{Thomas Precession as Perihelion Advance}
+Reference the "Two Circular Exmaples" AJP paper as pointing out that the coordinate system of the travelling observer has rotated.  Link this to Somerfeld's offhanded comment on the rotating coordinate system of the perihelion advance.
 \\
 \\
-In addition to the language port, we re-architected the simulator to be object oriented.  While only the most rudimentary object architected structure has been put in place, it has already allowed us to simulate different solenoid parameters and their pertinence to our research with ease.  The basic object in the simulator is a member of the Crusher class.  Each Crusher object has its own set of parameters that fully describe a can crusher apparatus design configuration.  Among these configurable parameters  are the radius and the number of coils in the solenoid, the temperature sensitive resistivity of the solenoid, and the temperature of the solenoid's operating environment.  As a concrete example, the following code sets up the Crusher object with a solenoid radius of $3.8\;\;cm$, an initial power supply voltage of $5000\;\;Volts$, and an operating temperature of $4.2\;\;degrees\;\;K$.  the set\_movecan method tells the Crusher object that we're simulating pulsing the magnetic field with a solid core in the solenoid's center, rather than a compressible soda can.
 \\\\\\
-\section{Example Simulator Applications}
+\section{Thomas Precession and Karpetoff Takeno Coordinates}
 We created simulations that answered many questions about our experimental design without the expense of building and testing different pulsed magnetic solenoids.  Some concrete examples of these questions are: 
 \\
 \\

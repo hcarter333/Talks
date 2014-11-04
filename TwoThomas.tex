@@ -1,0 +1,140 @@
+\documentclass[prb,preprint]{revtex4-1} 
+% The line above defines the type of LaTeX document.
+% Note that AJP uses the same style as Phys. Rev. B (prb).
+
+% The % character begins a comment, which continues to the end of the line.
+
+\usepackage{amsmath}  % needed for \tfrac, \bmatrix, etc.
+\usepackage{amsfonts} % needed for bold Greek, Fraktur, and blackboard bold
+\usepackage{graphicx} % needed for figures
+\usepackage{listings}
+
+\begin{document}
+
+% Be sure to use the \title, \author, \affiliation, and \abstract macros
+% to format your title page.  Don't use lower-level macros to  manually
+% adjust the fonts and centering.
+
+\title{Two New Derivations of the Thomas Precession Using Perihelion Advance and Karapetoff Takeno Coordinates
+}
+% In a long title you can use \\ to force a line break at a certain location.
+
+\author{Hamilton B. Carter}
+\email{hcarter333@tamu.edu}
+\affiliation{Department of Physics, Texas A\&M University, TX 77843}
+
+% Please provide a full mailing address here.
+
+% See the REVTeX documentation for more examples of author and affiliation lists.
+
+\date{\today}
+
+\begin{abstract}
+This brief note  presents an updated version of DeSilva's can crusher simulator, whose results were first published 20 years ago in conjunction with the design of an associated laboratory demonstration.  The original simulator has been updated from IDL to Python running in the SageMath framework and open-sourced.  The code has also been re-structured into an object oriented architecture that allows for simple input of can crusher solenoid parameters.  This allows multiple solenoids with varying configurations to be simulated and compared.  We describe the facilities the updated simulator provides, along with the basics of its use.  While we're using the simulator to design apparatus for the study of bulk properties of superconducators, it can also be used in conjunction with a can crusher apparatus as part of an interactive demonstration laboratory.
+\end{abstract}
+% AJP requires an abstract for all regular article submissions.
+% Abstracts are optional for submissions to the "Notes and Discussions" section.
+
+\maketitle % title page is now complete
+
+
+\section{Introduction} % Section titles are automatically converted to all-caps.
+% Section numbering is automatic.
+
+Wherein we define the Thomas precession.  Mention what it is and what it isn't, especially for the purposes of this article.  For example, we don't have a finite gyroscope like the most recent EJP article on it, (although that's nice that it works).  This is also not an article about how an actual gyroscope might precess about the axis of its rotation.  Point out that this is acceptable, and that while the oft-referenced Russian history article claims Missner, Thorne, and Wheeler were wrong, they weren't.  However, we won't be discussing it here.  We're using the idealized gyro-compass described by Rindler on his article regarding rotating cooordinate frames, and general relativity.  Be sure to reference Rindler.
+
+Reference Munoz and Yoshida as having derived rotating versions of the Lalace-Runge-Lenz vector.  Reference Sommerfeld's incredibly simple derivation that the perihelion advance as Thomas precession will come from.  
+
+Refernce the disc problem, Takeno, Thomas, and the perhaps one other person in that historical line.  Look at the Iranian paper to find the other person.  Reference the Iranian paper.
+\\
+\\
+\section{Language Port and Architecture}
+While IDL is still a ubiquitous language, and a free version known as GDL can be installed on Linux platforms, we decided to port the code to Python executed within the SageMath platform.  Our team is familiar with Python, and with the advent of packages like NumPy and SciPy, the language is gaining a certain noteriety with young physicists.  SageMath has a cloud based implementation that has been funded by the National Science Foundation and Google. The user interface of this cloud-based software implementation is accessible to the public through any web browser.  Consequently, anyone can make use of the SageMath platform and the ported simulator on any operating system that supports a web browser.  There are no operating system or software installation considerations to be made.
+\\
+\\
+In addition to the language port, we re-architected the simulator to be object oriented.  While only the most rudimentary object architected structure has been put in place, it has already allowed us to simulate different solenoid parameters and their pertinence to our research with ease.  The basic object in the simulator is a member of the Crusher class.  Each Crusher object has its own set of parameters that fully describe a can crusher apparatus design configuration.  Among these configurable parameters  are the radius and the number of coils in the solenoid, the temperature sensitive resistivity of the solenoid, and the temperature of the solenoid's operating environment.  As a concrete example, the following code sets up the Crusher object with a solenoid radius of $3.8\;\;cm$, an initial power supply voltage of $5000\;\;Volts$, and an operating temperature of $4.2\;\;degrees\;\;K$.  the set\_movecan method tells the Crusher object that we're simulating pulsing the magnetic field with a solid core in the solenoid's center, rather than a compressible soda can.
+\\\\\\
+\section{Example Simulator Applications}
+We created simulations that answered many questions about our experimental design without the expense of building and testing different pulsed magnetic solenoids.  Some concrete examples of these questions are: 
+\\
+\\
+\section{Conclusions}
+We have demonstrated two new derivations of the innocuous Thomas Precession.  The ease with which tese derviations can be demonstrated frees up more time for in-class discussions of whta the Thomas precession actually is.
+
+\section{Audience Notes}
+Insert notes, concerns, suggestions, and jibes here!
+
+\begin{acknowledgments}
+HBC was supported by a grant from the Texas Academy of Sciences.\end{acknowledgments}
+
+\begin{thebibliography}{99}
+% The numeral (here 99) in curly braces is nominally the number of entries in
+% the bibliography. It's supposed to affect the amount of space around the
+% numerical labels, so only the number of digits should matter--and even that
+% seems to make no discernible difference.
+% The issue number (3) in this citation is optional, because AJP's pagination 
+% is by volume.
+
+\bibitem{desilvacan} DeSilva, A. W., ``Magnetically imploded soft drink can", The American Journal of Physics, \textbf{62}, 41--45 (1994).  
+
+\bibitem{ILD} Sokoloff, D. R. and Thornton, R. K., ``Using interactive lecture demonstrations to create an active learning environment", Phys. Teach. 35, 340--347 (1997).  
+
+\bibitem{gitSim} Carter, H. B., \url{https://github.com/hcarter333/cancrusher}
+
+
+\end{thebibliography}
+
+% If your manuscript is conditionally accepted, the editors will ask you to
+% submit your editable LaTeX source file.  Before doing so, you should move
+% all tables and figure captions to the end, as shown below.  Tables come 
+% first, followed by figure captions (with figure inclusions commented-out).
+% Figures should be submitted as separate files, collected with the
+% LaTeX file into a single .zip archive.
+
+%\newpage   % Start a new page for tables
+
+%\begin{table}[h!]
+%\centering
+%\caption{Elementary bosons}
+%\begin{ruledtabular}
+%\begin{tabular}{l c c c c p{5cm}}
+%Name & Symbol & Mass (GeV/$c^2$) & Spin & Discovered & Interacts with \\
+%\hline
+%Photon & $\gamma$ & \ \ 0 & 1 & 1905 & Electrically charged particles \\
+%Gluons & $g$ & \ \ 0 & 1 & 1978 & Strongly interacting particles (quarks and gluons) \\
+%Weak charged bosons & $W^\pm$ & \ 82 & 1 & 1983 & Quarks, leptons, $W^\pm$, $Z^0$, $\gamma$ \\
+%Weak neutral boson & $Z^0$ & \ 91 & 1 & 1983 & Quarks, leptons, $W^\pm$, $Z^0$ \\
+%Higgs boson & $H$ & 126 & 0 & 2012 & Massive particles (according to theory) \\
+%\end{tabular}
+%\end{ruledtabular}
+%\label{bosons}
+%\end{table}
+
+%\newpage   % Start a new page for figure captions
+
+%\section*{Figure captions}
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics{GasBulbData.eps}   % This line stays commented-out
+%\caption{Pressure as a function of temperature for a fixed volume of air.  
+%The three data sets are for three different amounts of air in the container. 
+%For an ideal gas, the pressure would go to zero at $-273^\circ$C.  (Notice
+%that this is a vector graphic, so it can be viewed at any scale without
+%seeing pixels.)}
+
+%\label{gasbulbdata}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=5in]{ThreeSunsets.jpg}   % This line stays commented-out
+%\caption{Three overlaid sequences of photos of the setting sun, taken
+%near the December solstice (left), September equinox (center), and
+%June solstice (right), all from the same location at 41$^\circ$ north
+%latitude. The time interval between images in each sequence is approximately
+%four minutes.}
+%\label{sunsets}
+%\end{figure}
+
+\end{document}

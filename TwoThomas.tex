@@ -54,7 +54,29 @@ Reference the "Two Circular Exmaples" AJP paper as pointing out that the coordin
 \\
 \\\\\\
 \section{Thomas Precession and Karpetoff Takeno Coordinates}
-We created simulations that answered many questions about our experimental design without the expense of building and testing different pulsed magnetic solenoids.  Some concrete examples of these questions are: 
+Our second derivation hinges upon three simple tricks. Two of them are things that we often mention in freshman physics lecture, but rarely back up until upper level classes.  First, special relativity only cares aobut the direction of motion, queue up the endless lectures on the relativistic ladder problem.  Second, a clever choice of coordinate system can make turn derivation hell into derivation heaven.  The third trick has lurked in the shadows since Alfred Dobbs first coined the phrase rapidity, but it wasn't properly discovered until Antippa \cite{antipparapid} pointed it out.  While Antippa's presentation was deep, it was perhaps too deep.  The trick labored in the shadows for another year before kapuscik\cite{kapuscikrapid} uttered the famous phrase regarding its use'...we may \textit{relate all velocity dependent relativistic physical quantities to the corresponding non-relativistic quantities}.'  The italics are Kaspuscik's because, it's just that important.  Still, a concrete example with feeling wouldn't be seen for another seven years in the work of Walter\cite{wlaterrapid}.  As a side note, he was apparently unaware of Antippa's foundational work in the field.
+
+The aspect of third trick that we will exploit can be summed up in a nutshell; if you have a Galilean velocity solution to a one dimensional mechanics problem, it can be used directly as a rapidity to produce the same result in special relativity.  Let's look at a brief, but rather impressive example of this.  As late as the 2001 edition of Goldstein, students are still implored to first re-write the rocket equation of motion to account for relativistic mass effects and then solve for lab frame velocities.  However, we can use the Galilean solution for the same problem
+\\
+\\
+$v = $
+\\
+\\
+and simply plug it in as the rapidity $w$ in the following expression for lab frame velocity
+\\
+\\
+$\dfrac{v}{c} = tanh\left(\dfrac{w}{c}\right)$
+\\
+\\
+A little bit of algebraic wrangling will produce Goldstein's result with far less effort,
+\\
+\\
+$v = $
+\\
+\\
+Wait... what!?  As it turns out, all those vignette's on adding velocities in special relativity using rapidity and the hyperbolic tangent addition of angle formula didn't go nearly as far as they could have.  There are two simple proofs of the method.  Ours considers an incremental velocity while Walter's integrates to produce what he tems the 'proper speed'.
+
+Here, we show that the precession can be derived as a one dimensional expression.  There's no requirement to approximate angles, as in "two circles", or use infintesimal boosts in different directcions, or do whatever they did in "half page derviation" that took two pages.  Outline the history of the Rapidity as Galilean tranform solution, expalining the three locations it lighted in before being actually demonstrated as useful.  Give a brief derivation that jutifies the method and then show the Goldtsein rocket derviation just for funsies.  Finally, using the Karapetoff Lorentz transform, show the Thomas precession in a few lines.
 \\
 \\
 \section{Conclusions}
@@ -74,9 +96,24 @@ HBC was supported by a grant from the Texas Academy of Sciences.\end{acknowledgm
 % The issue number (3) in this citation is optional, because AJP's pagination 
 % is by volume.
 
+\bibitem{ejpseggyro} K. Rebilas, ``Thomas precession: where is the torque? Another solution to the problem", European Journal of Physics 35 (2014) 065027
+
+\bibitem{twocircle}  Wortel, Malin, Semon, “Two examples of circular motion for introductory courses in relativity“, 
+American Journal of Physics, 75, (2007), 1123
+
+\bibitem{antipparapid} Antippa, A. F., “Relativistic law of addition of multiple collinear velocities”, European Journal of 
+Physics, 19, (1998), 413-417
+
+\bibitem{kapuscikrapid} Kapuscik, E., “Comments on the paper `Relativistic law of addition of multiple collinear velocities'”,
+European Journal of Physics, 20, (1999), L35
+
+\bibitem{wlaterrapid} Walter, U., “Relativistic rocket and space flight”, Acta Astronautica, 59, (2006), 453-461
+
 \bibitem{desilvacan} DeSilva, A. W., ``Magnetically imploded soft drink can", The American Journal of Physics, \textbf{62}, 41--45 (1994).  
 
 \bibitem{ILD} Sokoloff, D. R. and Thornton, R. K., ``Using interactive lecture demonstrations to create an active learning environment", Phys. Teach. 35, 340--347 (1997).  
+
+\bibitem{sommerfeld_atomic} Sommerfeld, A, “Atomic Structure and Spectral Lines, Volume I”, EP. Dutton and Company Inc. Publishers, New York, NY, 1934
 
 \bibitem{gitSim} Carter, H. B., \url{https://github.com/hcarter333/cancrusher}
 

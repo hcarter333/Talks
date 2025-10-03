@@ -59,17 +59,17 @@ Our novel methodology uses a programming paradigm defined in the 1970s, but seld
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In a digital design integrated circuit project, the product team first creates a specification and/or a set of requirements documents. The design team then creates a simulatable design based on these specifications.  The verification team reads the same specification/requirements documents, and ideally, without looking at the design code creates a test bench that stimulates the design in the way that it will be used as laid out by the documents, and then checks that the design behaves correctly based on those same documents. This 'two perspective' process Simulation-based functional verification of digital integrated circuits is the process of a second person reviewing the specification and or requirements documents for a device under construction and then constructing test cases that run in a simulator with the design to determine if the design is indeed implementing the behavior specified by the documents mentioned above. It is considered a cost-effective practice in that it is cheaper to simulate a design to find bugs during development than it is to discover these bugs after silicon has been produced, a step in the design creation process that typically costs more than one million dollars.
+In a digital design integrated circuit project, the product team first creates a specification and/or a set of requirements documents. The design team then creates a simulatable design based on these specifications.  The verification team reads the same specification/requirements documents, and ideally, without looking at the design code creates a test bench that stimulates the design in the way that it will be used as laid out by the documents, and then checks that the design behaves correctly based on those same documents. This 'two perspective' process is considered a cost-effective practice in that it is cheaper to simulate a design to find bugs during development than it is to discover these bugs after silicon has been produced, a step in the design creation process that typically costs more than one million dollars.
 
 Digital designs are complex systems. As such, debug can be difficult. Bugs are easier to fix when they are found earlier in the project. This prioritizes rapid development of verification code to detect these bugs.
 
-A brief look at the architecture for a Universal Verification Methodology test bench immediately gives an impression of the complexity of the structure and the learning curve that is encountered by new users. There are more than 5 different types of classes, many of them containing the others.
+A brief look at the architecture for a Universal Verification Methodology test bench immediately gives an impression of the complexity of the structure and the learning curve that is encountered by new users. There are more than 5 different types of classes arranged into hierarchies.
 
-There are several obstacles that hinder teams meeting their functional verification goals. While object-oriented programming for verification via System Verilog is an effective solution to create reusable code, it introduces complexity. Traditionally, design teams have maintained high bars for incorporating code changes into the design's repository. This practice has migrated to the verification side of the industry where, in concept, it is useful, but where it is often less than optimally applied as we forget that the verification code is not going to be fabbed, and therefore, rapid changes to verification code are far less risky. 
+Several obstacles hinder teams from meeting their functional verification goals. While object-oriented programming for verification via System Verilog is an effective solution to create reusable code, it introduces complexity. Traditionally, design teams have maintained high bars for incorporating code changes into the design's repository. This practice has migrated to the verification side of the industry where, in concept, it is useful, but where it is often less than optimally applied as we forget that the verification code is not going to be fabbed, and therefore, rapid changes to verification code are far less risky. 
 
 In Section 2, we will review why object-oriented programming is a good platform for functional verification coding. As we do that, we will discuss how these very same advantages also make it difficult to bring new engineers, both engineers who are familiar as well as those who are not familiar with the Universal Verification Methodology, (UVM), up to speed on our verification systems. Next we wll discuss continuous integration as a methodology that is profitably applied to both design and verification code to provide an audit trail to back out unwanted or acciedntal code changes that break design or test bench functcionality. Again, we'll discuss the   advantages of continuous integration in general and then focus more intently on inefficiencies in the verification development process. Finally, we'll discuss regression systems. In some perspectives, they are a part of a continuous integration methodology. In other apsects they are part oof a constrained random verification metohdology that continues to look for bugs in complex systems that cannot be exhaustively verified in simulation. Whlile regression systems are crucial to successful verificaiton, we'll also discuss how they can once again, you guessed it, impact the overall efficiency of a chip design project negatively if a new team member is able to accidentally release broken code either in a test case that was unexpected by the rest of the team, or a checker that fires incorrectly for every single one of the, typically, thousands of test cases that routinely run in a constrained random verification regression.
 
-In section 3, we'll introduce the solution to each of these issues: an aspect oriented programming development approach. In this section, we'll first review aspect oriented programming, and idea that's been around since the '70s, but seen little use, especially in chip design projects, as an easy to grasp everyday metaphor. Then we'll explain how building a layer of ojbect oriented extensions helps us to avoid all of the inefficiencies identified in section 2.
+In section 3, we'll introduce the solution to each of these issues: an aspect oriented programming development approach. In this section, we'll first review aspect oriented programming, and idea that's been around since the '70s, but seen little use, especially in chip design projects, as an easy to grasp everyday metaphor. Then we'll explain how building a layer of object oriented extensions helps us to avoid all of the inefficiencies identified in section 2.
 
 Section 4 details the coding constructs in SystemVerilog we use to implement the concepts in Section 3. 
 
@@ -155,11 +155,11 @@ Still, this all sounds like a lot of work, so let's look at what can happen if w
 When new code doesn't behave well it can produce false failures in verification test benches that can take one or more days to debug. If the code repository was managed effectively, the change can be backed out. In the meantime, every failure has to be investigated because any of the failures might be real.
 
 \subsection{Continuous Integration Technologies: The (Occasionally) Harsh Reality}
-Mistakes in the design can cost more than one million dollars if we got to fab with a design that doesn't actually work. That's a big number. Consequently, design code frequently goes through a continuous integration process that is far less than, shall we say, continous. Multiple hour long  smoke test regressions to release design code changes are not uncommon.
+Mistakes in the design can cost more than one million dollars if we got to fab with a design that doesn't actually work. That's a big number. Consequently, design code frequently goes through a continuous integration process that is far less than, shall we say, continuous. Multiple hour long  smoke test regressions to release design code changes are not uncommon.
 
-In many projects, this protective infrastrucdture has boiled over into the verification side of the project as well. There can be perfectly justifiable reasons for that. For example, if we're runing 1000s of processors in the cloud for overnight design regression testing, we could be looking at losing a significant amount of effort if all of our test cases fail. We could be looking at losing even more in the effort it takes to put things back right. If the design and verification code changeed before the regression, we have a perfect storm and we need to make sure that we can isolate the source of each of the, potentially, thousands of failures before moving forward. There are known procedures to ameliorate these costs, of course, but they're beyond the scope of this article. For us, it is enough to know that long release cycles are not completely unwarranted, they can save us money and resources. Now, let's look at what they can cost us.
+In many projects, this protective infrastructure has boiled over into the verification side of the project as well. There can be perfectly justifiable reasons for that. For example, if we're running thousands of processors in the cloud for overnight design regression testing, we could be looking at losing a significant amount of effort if all of our test cases fail. We could be looking at losing even more in the effort it takes to put things back right. If the design and verification code changed before the regression, we have a perfect storm and we need to make sure that we can isolate the source of each of the, potentially, thousands of failures before moving forward. There are known procedures to ameliorate these costs, of course, but they're beyond the scope of this article. For us, it is enough to know that long release cycles are not completely unwarranted, they can save us money and resources. Now, let's look at what they can cost us.
 
-Forcing engineers to submit code through an hours long release process can lead to two issue: code bloat and code rot. In the first case—bloat—engineers thend to write much more code at once because if they're going to lose half hours to releasing code, they want their code to be hefty enough to justify the sacrificed time. The second issue—rot—is a natural consequence of the first. If the engineer creates more code, that creation process—naturally—takes longer. In the meantime, other engineers have committed code. Re-integrating that code into the code base the engineer wants to release can be problematic. The longer the engineer waits, the more problematic merging their code will become. The combination of bloat and, subsequently, rot can easily result in the engineer losing an entire day to releasing code. 
+Forcing engineers to submit code through an hours long release process can lead to two issue: code bloat and code rot. In the first case—bloat—engineers tend to write much more code at once because if they're going to lose half hours to releasing code, they want their code to be hefty enough to justify the sacrificed time. The second issue—rot—is a natural consequence of the first. If the engineer creates more code, that creation process—naturally—takes longer. In the meantime, other engineers have committed code. Re-integrating that code into the code base the engineer wants to release can be problematic. The longer the engineer waits, the more problematic merging their code will become. The combination of bloat and, subsequently, rot can easily result in the engineer losing an entire day to releasing code. 
 
 In the worst case, this results in a positive feedback loop creating larger and larger releases of code taking longer and longer to get into the code repository. If one of these larger submissions causes regression issues  an additional feedback loop can begin: the integration process is upped to five hours—for example—in hopes of alleviating issues caused by bloat-n-rot that were themselves caused by the four hour release process. We could also go the other route. We could decide that what we really need is a human-in-the-loop pull request process where we review everyone's code to make sure it hasn't exceeded the anti-code-bloat rules we put in place.
 
@@ -170,7 +170,7 @@ There's a way around all this though.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Answer: Aspect Oriented Programming}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Whereas object-oriented-programming, (OOP), which frequently focuses on the most efficient architectures of distinct objects that achieveve a task, sacrificing organizational simplicity for horizontal reuse in many cases, aspect oriented programming, (AOP), can be roughly defined as organizing coding efforts according to achieving a customer-facing outcome quickly and in a way that is readily apparent upon reading the code by using and/or extending multiple existing OOP objects within an architecture at once. As an analogy, think about the design of a house. There are several systems that are things unto themselves. These systems might include plumbing, electrical connectivity—in the form of wiring runs throughout the house, ventilation and air handling, and finally lighting from both outdoor and indoor sources. Each of these systems has its own arena of expertise. While the systems must interact to an extent, the plumbinating frequently enters and exits a structure through its foundation—they are also very much things unto themselves designed by subject matter experts in each particular field.
+Whereas object-oriented-programming, (OOP), which frequently focuses on the most efficient architectures of distinct objects that achieveve a task, sacrificing organizational simplicity for horizontal reuse in many cases, aspect oriented programming, (AOP), can be roughly defined as organizing coding efforts according to achieving a customer-facing outcome quickly and in a way that is readily apparent upon reading the code by using and/or extending multiple existing OOP objects within an architecture at once. As an analogy, think about the design of a house. There are several systems that are things unto themselves. These systems might include plumbing, electrical connectivity—in the form of wiring runs throughout the house, ventilation and air handling, and finally lighting from both outdoor and indoor sources. Each of these systems has its own arena of expertise. While the systems must interact to an extent, the plumbing frequently enters and exits a structure through its foundation—they are also very much things unto themselves designed by subject matter experts in each particular field.
 
 Now, think about a kitchen. It utilizes each of these systems in a very limited space where all of the systems work together to create a positive user experience. The creator of the kitchen is an expert on kitchens. They use the tools provided by each of the other architectural experts, but they just use them. Even to a casual observer the use of each of the systems is fairly obvious. The electrical wire runs supply energy to the stove and refrigerator. The plumbing provides clean water for cooking as well as a sewage line to remove waste from the area. The use of outdoor lighting makes the kitchen a more pleasant place to be in the morning, making coffee while the sun rises over the horizon. 
 Both kinds of architectural development serve very important purposes. The underlying structural subject matter experts—electrical, plumbing, lighting, and structural—provide tools that must operate all the time; the kitchen designer uses those tools in readily apparent combinations to create something that is immediately pleasing to the end user, the customer.
@@ -212,9 +212,6 @@ Let's take a look at what happened when using aspect oriented development.
 
 
 \subsubsection{Getting the basics ahem, bases right first}
-All footnotes\footnote{\bf This is an example of a Footnote.} following the IEEE copyright notice are numbered consecutively. 
-
-\subsubsection{Getting the basics ahem, bases right first}
 There are a few considerations to make that will make development even easier with respect to aspect oriented development. These considerations involve a base virtual class for the DUT's test bench and a base predictor.
 
 The base virtual class should contain handles to each of the agents' sequences. These handles take very little space, (about four bytes a piece), but make it very easy for the virtual sequences in our aspect layers to create and use whatever sequences they need at a moments notice. If you'd like to shower your developers in even more largess, go ahead and create one of each of the agent sequences in the base virtual sequence class' constructor. All you'll do is create copies of each sequences member variables in memory, (usually this is a small space, but you'll of course need to tailor this advice to your own application.) The verifiers of new features will then simply have the sequences available for immediate use in their  own extended virtual sequence's body method.
@@ -226,7 +223,7 @@ Let's take a look at what we've done. First, all new development is contained in
 
 Having the entire context available in a single file provides several advantages.  We can ramp new developers quickly. We can debug quickly by sticking to a single file. We can discuss feature functionality and verification easily with design and system engineers by having only a single file to peruse. To extend our kitchen analogy, if we're cooking a new dish and then sharing it with our cooking friends, we don't force them to understand the plumbing, wire runs, and lighting choices in our kitchen. We merely share the dish we created while perhaps teaching them how to prepare it, (or verifying that we created in the correct way by asking them for feedback), by using the fixtures that are readily available in our kitchen as a result of all those essential underpinnings that we no longer have to discuss.
 
-When we introduce a new cook to our kitchen, we can point out all of its features. There are spickets for transactions from every monitor in the test bench. There are sequences that can knead, slice, or stir the design under test. There's a context—a recipe if you will—inherent in reading the flow of our single newly compiled file which is also known as an aspect layer.
+When we introduce a new cook to our kitchen, we can point out all of its features. There are spiggots for transactions from every monitor in the test bench. There are sequences that can knead, slice, or stir the design under test. There's a context—a recipe if you will—inherent in reading the flow of our single newly compiled file which is also known as an aspect layer.
 
 \subsection{Locating Layers}
 In UVM architectures, the test case class contains all the other objects in the verification test bench. Consequently—in most file structures at least—the test class object is compiled last and therefore has all the class names in the entire test bench available to the compiler. This makes it so that we don't have to steer new developers or designer through our entire directory structure. Again, the structure is important, beautiful even, but it contains details that our end users simply don't need to know.
@@ -236,19 +233,15 @@ In UVM architectures, the test case class contains all the other objects in the 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Let's talk about how this AOP quick-ramp approach fits into the rest of the verification ecosphere. Do we still need verification architects? Yes, very much. While the AOP methodology detailed here has wored very well, allowing us to leverage new engineers more effectively than was previously possible, it is not intended as a replacement for either fully fledged verification architects or UVM. 
 
-Where does this methodology leave us with respect to growing current hires into full fledged verification architects who can take over and nurture new verification projects. Our experience with this system has been that rather than silo enegineers into very specific skill categories, creating agents, creating test cases, creating constraints, etc. This methodlogy allows us to build well-rounded engineers from the start. Then, as we help our new engineers build their skills, the aspect gives us an easy departure point to teach from, and the engineers themselves a useful platform for trying experiments as they build there new knowledge in verification architecture.
+Where does this methodology leave us with respect to growing current hires into full fledged verification architects who can take over and nurture new verification projects. Our experience with this system has been that rather than silo engineers into very specific skill categories, creating agents, creating test cases, creating constraints, etc. This methodology allows us to build well-rounded engineers from the start. Then, as we help our new engineers build their skills, the aspect gives us an easy departure point to teach from, and the engineers themselves a useful platform for trying experiments as they build there new knowledge in verification architecture.
 
-How does this method protect the existing code base and its concordant regression? By extending classes in SystemVerilog, the developer is free to use whatever is in the class, add code to the beginnings or ends of existing methods, or completely throw away codes from existing methods in their new versions. Here's what the code looks like for each of the options mentioned above.
+How does this method protect the existing code base and its concordant regression? By extending classes in SystemVerilog, the developer is free to use whatever is in the class, add code to the beginnings or ends of existing methods, or completely throw away code from existing methods in their new versions. Here's what the code looks like for each of the options mentioned above.
 
-\verb|class my_extended_test extends test_top;|
+\verb|class my_test extends test_top;|
 \\
 \verb|virtual void function use_it_as_is();|
 \\
-\verb|  //I could have simply not implemented |
-\\
-\verb|  //but supposing I brought i |
-\\
-\verb|  //mind, I can do the following|
+\verb|  //Use my parent's method |
 \\
 \verb|  super.use_it_as_is();|
 \\
@@ -257,61 +250,122 @@ How does this method protect the existing code base and its concordant regressio
 \\
 \verb|virtual void function add_to_this();|
 \\
-\verb|  super.my_im_going_to_add_to_this();|
+\verb|  super.add_to_this();|
 \\
 \verb|  //base class code is complete|
 \\
 \verb|  //add my new code here|
 \\
+\verb|  //.....|
+\\
 \verb|endfunction|
 \\
 \\
-\verb|virttual void function |
+\verb|virtual void function a_new_beginning() |
 \\
-\verb|add_a_new_start_to_this();|
+\verb|  add_a_new_start_to_this();|
 \\
 \verb|  //before  base class code begins|
 \\
-\verb|  super.new_start_to_this();|
+\verb|  super.a_new_beginning();|
 \\
 \verb|endfunction|
 \\
 \verb|endclass|
 \\
 
-Now that the developer has their new version of the class, they can simply instantiate it using the factory pattern in SystemVerilog. The factory pattern is a feature of the Unified Verification Methodology that is frequently mentioned, and one for which a lot of fuss is created, and yet, despite all the fuss, is also a feature  that is frequently misunderstood. The factory pattern simply states that when any object instantiates a new object via a call to create  rather then the SystemVerilog 'new' method, the factory comes into play. Using the factory, we can pull a polymorphic switcheroo on existing code. So, if we create a new predictor, we can use code that looks like the following to instantiate it in an extension of our existing environment.
+There are two more things we can do to modify the class, we can completely remove the code from the parent's method like so,
 
-\verb|test class|
+\verb|virtual void function my_cool_stuff() |
 \\
-\verb|    build_phase|
+\verb|  //do absolutely nothing|
 \\
-\verb|    base_pr::type_override(type::my_p);|
+\verb|endfunction|
+
+and we can do the version of OOP extension that everyone gets in their polymorphism interview question
+
+\verb|virtual void function my_cool_stuff() |
+\\
+\verb|  //Architect doesn't have to know me to|
+\\
+\verb|  //execute code specific to my subclass|
+\\
+\verb|  //...my new code that doesn't use super|
+\\
+\verb|endfunction|
+
+
+
+Now that the developer has their new version of the class, they can simply instantiate it using the factory pattern in SystemVerilog. The factory pattern is a feature of the Unified Verification Methodology that is frequently mentioned, and one for which a lot of fuss is created, yet, despite all the fuss, it is of the most misunderstood and underutilized features of the entire methodology, paling in comparison only to the the configuration database. The factory pattern simply states that when any object instantiates a new object via a call to the factory's create method  rather then the SystemVerilog 'new' keyword, the factory comes into play. 
+
+Let's walk through how this is done. At a basic level, the factory is an object that catalogs other objects. If SystemVerilog was a more reflective language, the factory might automatically know about all the classes that had been loaded into the simulator. It's not though, so the factory doesn't, and so, we have to tell the factory each class we want to in a factory pattern exists. Classes are registered automatically by using one of two macros provided with UVM, namely, `uvm\_object\_utiles(classname) or `uvm\_component\_utils(classname). These calls are so ubiquitous and complete so many different setup tasks that while most engineers use them, many engineers don't have any idea that this is where they registered their classes with UVM's factory.
+
+One a class is registered with the factory, the engineer can create a new instance of the class either by calling new. or by calling the create method in the factory like so
+
+\verb|myclass myh; |
+\\
+\verb|myh = myclass:type_id::create("myname");|
+
+If there haven't been any type overrides, the factory will return a newly 'created' instance of myclass into myh. That might seem pretty bland, and like a lot of code to do something that-at this point-is effectively the sam as just calling new(), but wait.
+
+We can instruct the factory to return any subclass of myclass when create is called by using the type\_override method like so
+
+\verb|myclass::type_id::|
+\\
+\verb|set_type_override(myextclass::get_type());|
+
+After the above line of code executes, any time the factory is asked to create a myclass object, it will instead create and return a handle to a myextclass object.  
+
+And so, using the factory, we can pull a polymorphic switcheroo on existing code. And that is how we implement the aspect oriented process described here.
+
+Suppose we want to ramp a new addition to our verification team develop a new predictor quickly. Using this factory pattern and an intentionally aspect oriented architecture, we can, in fact, do that quickly. 
+
+First, we need to set the stage. We define and instantiate an 'empty' predictor in the UVM environment for our test bench. This 'empty' predictor contains ports for every one of the agent monitors instantiated in the environment, but it does nothing with these ports. That means it contains a write\_ method for each port. For example, it might contain write\_ahb\_read and write\_ahb\_write methods. During the connect\_phase of our environment object's construction, we carefully wire this empty predictor into every agent's monitor ports. We incur a little bit of overhead by doing this. Every monitor transaction will be forwarded to this predictor that will then do nothing with them, so... Why?
+
+Because with that little bit of forethought, we can hand new engineers an aspect layer file that contains a predictor class that extends the empty class and a test case class that uses a type\_override to ensure that when the environment creates its empty predictor, it is now, instead creating our new engineer's specialized predictor that actually does things with the transactions it receives. Here's a pseudo-code version of the file we'll hand our new engineer,
+
+\verb|class newPred extends emptyPred;|
+\\
+\verb|void function write_ahbrd(ahbr t);|
+\\
+\verb|//Use the transaction|
+\\
+\verb|//endfunction|
+\\
+\\
+\verb|//Other write_ methods|
 \\
 \verb|endclass|
 
+\verb|class newTest extends safeTest;|
+\\
+\verb|void function build_phase(...);|
+\\
+\verb|type_override newPred for emptyPred|
+\\
+\verb|super.build_phase(...)|
+\\
+\verb|endclass|
 
-Then, I can instantiate my new environment that instantiates my new predictor by adding the following code to the same method:
+The test case will still run the same stimulus that its base class ran. Presumably, we've chosen a test case that already runs stimulus pertinent to the new predictor being developed. When the test case object runs in simulation, everything is the same, with one exception. When the environment in this simulation instantiates its 'empty' predictor, it is instead instantiating the new predictor being developed by the new engineer. There are a few key things to note here. Only the new test case will ever isntantiate the new predictor at this point in the development cycle. No other test cases are aware that the new predictor even exists becuase none of the other test cases contain our type\_override statement. The new predictor runs with all  of the other predictors developed and released into production that are instantiated by the production level environment class. Remember, the environment class hasn't changed at all, it's just being handed the engineer's new predictor when it asks the factory for an empty one.
 
-add base environment code
+The new engineer can start developing their new predictor immediately. They get all the carefully thought out services, predictors, stimulus, configuration ojects that have been created by the verification team prior to the new engineer's arrival. The new engineer can release their new test case with their new predictor into production that day. Worst case, assuming the predictor at least compiles, we might get one more test failing than we had before. At best, we're getting checking done on a feature that wasn't previously verified.
 
-and add it again for line cosumption estimate is why this is here
+Alternatively, by changing the above code a little bit and redefining a new environment class, I can create an environment that instantiates my new predictor by postpending it onto the environments build\_phase method). Then, I can use the factory to supply my new environment containing new predictor when the test case creates an environment.
+
+OK, so, our test case is created. It's an extension of our existing test case The existing test case of course instantiates my existing environment. Meanwhile, I extended that environment to instantiate the new predictor and used type\_override to switch in my new environment when the existing test case code that I've extended calls the create method for the existing environment. 
+
+When our new engineer starts to run new sequences to further exercise their new predictor, we automatically reap another benefit. Because the new test case uses the production level environment, all the existing predictors that have been running in regression successfully automatically simulate with this new stimulus. If that stimulus causes errors in the design or existing predictors, those errors are immediately apparent. Without breaking a regression, we can already start to debug the issues our new test case stimulus might cause. 
+
+\subsection{Shortened Coding to Regression Effectiveness Runway}
+The regression effectiveness runway is shortened by allowing test cases to be introduced into regression the day they are able to compile. We also reduce maintenance costs by simply extending existing code rather that reworking it in its entirety. This game can be played as many times as is practicable by literally building complex verification checkers out of simple steps. Another organizational enhancement that aspect oriented verification allows is the ability to catalog multiple checks as extensions to the same predictor in a hierarchical ladder with each new check automatically pulling in all the previously developed checks. While this increases the complexity of the class' hierarchically, it simplifies the understanding of each checker by allowing developers to focus on only the code for that check. This is yet another technique that facilitates the rapid deployment of incremental code changes that add value to the regression system as a whole.
+
+We've also experimented with delivering this methodology as a database driven template engine. Suppose I need a number of predictors created by an ever growing team of engineers. When each new engineer arrives, I'll have point them at the various agents I need them to use to write a new predictor. I'll have to provide example code of how to wire their predictor to each agent's monitor(s). It'll be kind of a pain and that's assuming that each engineer already knows about UVM's analysis port framework, a framework that has inspired entire articles like the one you're reading now. The ramping process will be anywhere from annoying to agonizing.
+
+Or, I can create and maintain an empty base predictor that contains the write\_* methods for every agent monitor port in the test bench. These methods are systematically loaded into a database, a SQLite database for example. Then, when a new predictor needs to be created and my team is presented with a brand new engineer, I can use my database front-end to select which monitor ports to include in the new predictor, click a 'generate aspect' button and output an aspect layer file with a new predictor class, and a new test case class that contains a type\_override to substitute in the new predictor class. Now my biggest challenge, (and yes, I've had this challenge), is convincing the new engineer that they can start writing their predictor immediately. I overcome this challenge by asking them to add a uvm\_info statement to each of the write\_* methods that outputs the received transaction and run a simulation with their new test case. The simulation runs, the engineer sees that their predictor indeed runs as advertised, receiving all the transactions necessary to implement the new predictor, and they're off and running.
 
 Here's what happens. The simulation starts up and creates one of my test objects. At the beginning of the build\_phase for the new test object, before anything else has happened, we ask the factory object to supply my new predictor any time anyone asks for the base class predictor.
 
-Alternatively, by changing the above code a little bit and redefining a new environment class, I can create an environment that instantiates my new predictor by postpending it onto the environments build\_phase method). Then, I can use the factory to supply my new environment containing new predictor when the test case creates an environment. Each of these models is illustrated in the two figures below.
-
-OK, so, our test case is created. It's an extension of our existing test case The existing test case of course instantiates my existing environment. Meanwhile, I extended that environment to instantiate the new predictor and used type\_override to switch in my new environment when the existing test case code that I've extended calls the create method for the existing environment. At the end of the build\_phase, my object objects shown in the figure below are all instantiated. Notice that this particular test case has our new predictor. Every other test case in the regression will continue to contain and use only their original predictors. Their classes have not been changed the verification environment class that they instantiate has also not been changed. Only the new test case has the new predictor
-
-Here's another  advantageous thing to consider. Because the new test case and environment are simply extensions of the originals, all the existing predictors that have been running in regression successfully automatically run with our test new test case. If our new test sequences cause errors in the design or existing predictors, we find out right away. Without breaking a regression, we can already start to debug the issues our new test cases might cause. We also get the benefit of the entire existing verification environment in our new test case (reference my OO checker article here.)
-
-Let's talk more about getting test cases into regression quickly. If this new test case fails, it can only fail itself. There is no other code or (no object) in the entire regression database that uses the new test case, environment, and predictor code. The cost of finding a bug goes up exponentially with the effort needed to discvoer it. <probably remove the last sentence.
-
-add a new task start
-\subsection{Shortened Coding to Regression Effectiveness Runway}
-The regression effectiveness runway is shortened by allowing test cases to be introduced into regression the day they are able to compile. We also reduce maintenance costs by simply extending existing code rather that reworking it in its entiriety. This game can be played as many times as is practicable by literally buiding complex verification checkers out of simple steps. Another organizational enhancement that aspect oriented verification allows is the ability to catalog gmultiple checks as extensions to the same predictor in a hierarchical ladder with each new check automatically pulling in all the previously developed checks. While this increases the complexity of the classs hierarchically, it simplifies the understanding of each checker by allowing developers to focus on only the code for that check. This is yet another technique that facillitates the rapid deployment of incremental code changes that add value to the regression system as a whole.
-
-
-Displays of hardware or software an author believes to be of wide interest to conference attendees may be set up with permission of the Technical Program Committee and by special arrangement with the Conference Manager.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
